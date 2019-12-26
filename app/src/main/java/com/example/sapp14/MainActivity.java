@@ -61,16 +61,16 @@ public class MainActivity extends AppCompatActivity {
                     int height = point.y;
                     int smallerdimension = width < height ? width : height;
                     smallerdimension = smallerdimension * 3 / 4;
-                    //qrgEncoder = new QRGEncoder(inputvalue, null, QRGContents.Type.TEXT, smallerdimension);
+                    qrgEncoder = new QRGEncoder(inputvalue, null, QRGContents.Type.TEXT, smallerdimension);
                   // qrgEncoder1 = new QRGEncoder(inputvalue1,null, QRGContents.Type.TEXT, smallerdimension);
-                   qrgEncoder2 = new QRGEncoder(inputvalue2,null, QRGContents.Type.TEXT, smallerdimension);
+                  // qrgEncoder2 = new QRGEncoder(inputvalue2,null, QRGContents.Type.TEXT, smallerdimension);
                     try {
-                      //  bitmap = qrgEncoder.encodeAsBitmap();
-                      //  bitmap1= qrgEncoder1.encodeAsBitmap();
-                        bitmap2= qrgEncoder2.encodeAsBitmap();
-                        //imageView.setImageBitmap(bitmap);
+                       bitmap = qrgEncoder.encodeAsBitmap();
+                    //   bitmap1= qrgEncoder1.encodeAsBitmap();
+                      //  bitmap2= qrgEncoder2.encodeAsBitmap();
+                        imageView.setImageBitmap(bitmap);
                         //imageView.setImageBitmap(bitmap1);
-                        imageView.setImageBitmap(bitmap2);
+                        //imageView.setImageBitmap(bitmap2);
                     } catch (WriterException e) {
                         Log.v(TAG, e.toString());
 
